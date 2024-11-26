@@ -15,6 +15,7 @@ Welcome to the FundMe project! This is a brief description of what this project 
 7. Modifiers
 8. Gas optimization (Immutability and constants)
 9. Custom errors
+10. receive and fallback functions
 
 
 **Contact me through:**
