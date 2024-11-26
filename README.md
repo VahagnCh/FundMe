@@ -6,16 +6,17 @@ Welcome to the FundMe project! This is a brief description of what this project 
 
 ## Content 
 
-1. Use of Chainlinks.
-2. Solidity Interfaces.
+1. Use of Chainlinks
+2. Solidity Interfaces
 3. Solidity Libraries
 4. Solidity Math
-5. Sending ETH Transfer, send and call.
+5. Sending ETH Transfer, send and call
 6. Contract Constructor
 7. Modifiers
+8. Gas saving (Immutability and constants)
 
 
-**Contact me through.**
+**Contact me through:**
 
 <a href="https://www.linkedin.com/in/vahagnc/" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" width="30" />
