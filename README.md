@@ -14,6 +14,7 @@ Welcome to the FundMe project! This is a brief description of what this project 
 6. Contract Constructor
 7. Modifiers
 8. Gas optimization (Immutability and constants)
+9. Custom errors
 
 
 **Contact me through:**
