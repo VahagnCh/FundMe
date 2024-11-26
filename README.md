@@ -13,7 +13,7 @@ Welcome to the FundMe project! This is a brief description of what this project 
 5. Sending ETH Transfer, send and call
 6. Contract Constructor
 7. Modifiers
-8. Gas saving (Immutability and constants)
+8. Gas optimization (Immutability and constants)
 
 
 **Contact me through:**
