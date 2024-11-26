@@ -34,8 +34,7 @@ contract FundMe {
         // Undo any action that have been done, and send the remaining gas back
     }
 
-    function withdraw() public {
-        require(msg.sender == owner, "Must be the owner");
+    function withdraw() public onlyOwner {
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex ++) {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
@@ -54,5 +53,11 @@ contract FundMe {
 
     }
 
+    // Executes the modifier first where we addit 
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Sender is not owner");
+        // _: means after the modifier execute the rest of the code
+        _;
+    }
 
 }
