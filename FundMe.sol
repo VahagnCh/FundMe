@@ -12,22 +12,22 @@ contract FundMe {
 
     using PriceConverter for uint256;
 
-    uint256 public minimumUsd = 5e18;
+    uint256 public constant MINIMUN_USD = 5e18;
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded; 
 
-    address public owner;
+    address public immutable i_owner;
 
     constructor() {
-        owner = msg.sender;
+       i_owner = msg.sender;
     }
 
     function fund() public payable {
 
         // Allow users to send money
         // Have a minimun money sent $5 USD
-        require(msg.value.getConversionRate() >= minimumUsd, "Didn't send enough ETH" ); // 1e18 = 1ETH = 1000000000000000000 = 1 * 10 ** 18
+        require(msg.value.getConversionRate() >= MINIMUN_USD, "Didn't send enough ETH" ); // 1e18 = 1ETH = 1000000000000000000 = 1 * 10 ** 18
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
         //What is a revert?
@@ -55,7 +55,7 @@ contract FundMe {
 
     // Executes the modifier first where we addit 
     modifier onlyOwner() {
-        require(msg.sender == owner, "Sender is not owner");
+        require(msg.sender == i_owner, "Sender is not owner");
         // _: means after the modifier execute the rest of the code
         _;
     }
