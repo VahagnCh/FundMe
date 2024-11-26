@@ -14,11 +14,8 @@ Welcome to the FundMe project! This is a brief description of what this project 
 6. Contract Constructor
 7. Modifiers
 
-## Contact Me
 
+**Contact me through [LinkedIn](https://www.linkedin.com/in/vahagnc/).**  
 <a href="https://www.linkedin.com/in/vahagnc/" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" width="20" />
-</a>  
-
-**Contact me through [LinkedIn](https://www.linkedin.com/in/vahagnc/).**
-
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" width="30" />
+</a>
