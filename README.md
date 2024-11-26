@@ -10,3 +10,5 @@ Welcome to the FundMe project! This is a brief description of what this project 
 2. Solidity Interfaces.
 3. Solidity Libraries
 4. Solidity Math
+5. Sending ETH Transfer, send and call.
+6. Contract Constructor
