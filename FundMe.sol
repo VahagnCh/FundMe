@@ -10,12 +10,12 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 
 contract FundMe {
 
-    uint256 public minimumUsd = 5;
+    uint256 public minimumUsd = 5e18;
 
     function fund() public payable {
         // Allow users to send money
         // Have a minimun money sent $5 USD
-        require(msg.value >= minimumUsd, "Didn't send enough ETH" ); // 1e18 = 1ETH = 1000000000000000000 = 1 * 10 ** 18
+        require(getConversionRate(msg.value) >= minimumUsd, "Didn't send enough ETH" ); // 1e18 = 1ETH = 1000000000000000000 = 1 * 10 ** 18
         //What is a revert?
         // Undo any action that have been done, and send the remaining gas back
     }
@@ -34,9 +34,14 @@ contract FundMe {
        return uint256 (price * 1e10);
     }
 
-    function getConversionRate() public {
-
-
+    function getConversionRate(uint256 ethAmout) public view returns(uint256){
+        // 1 ETH price in usd?
+        // 2000_000000000000000000
+        uint256 ethPrice = getPrice();
+        // (2000_000000000000000000 * 1_000000000000000000) / 1e18;
+        // $2000 = 1ETH
+        uint256 ethAmoutInUsd = (ethPrice * ethAmout) / 1e18;
+        return ethAmoutInUsd;
     }
 
     function getVersion() public view returns (uint256) {
